@@ -1,0 +1,6 @@
+Installation example for Snigelfan v 0.1b
+
+$ make
+$ su
+Password:
+# make install
