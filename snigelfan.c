@@ -18,7 +18,7 @@
 #define REDUCE_SPEED   43
 #define ESCAPE         27
 #define SPACE	       32
-#define PROGNAME       "Snigelfan v 0.1b diox 2004"
+#define PROGNAME       "Snigelfan v0.1b diox 2004"
 
 struct coord {
     int y;
