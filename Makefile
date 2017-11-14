@@ -5,7 +5,7 @@
 # -ggdb3 for debugging purposes
 
 make:
-	gcc -o snigelfan snigelfan.c -lncurses -Wall -ansi -DCOLOR
+	gcc -o snigelfan snigelfan.c -lncurses -Wall -DCOLOR
 clean:
 	rm -f snigelfan
 	rm -f *.core
