@@ -3,7 +3,7 @@
  * "THE BEER-WARE LICENSE" (Revision 42):
  * <Johan> wrote this file. As long as you retain this notice you
  * can do whatever you want with this stuff. If we meet some day, and you think
- * this stuff is worth it, you can buy me a beer in return. diox
+ * this stuff is worth it, you can buy me a beer in return. Johan
  * ----------------------------------------------------------------------------
  */
 
@@ -18,7 +18,7 @@
 #define REDUCE_SPEED   43
 #define ESCAPE         27
 #define SPACE	       32
-#define PROGNAME       "Snigelfan v0.1b 2004"
+#define PROGNAME       "Snigelfan-0.1 2004"
 
 struct coord {
     int y;
@@ -81,14 +81,14 @@ int main(int argc, char *argv[])
         }
     }
 
-    /* Initialize curses and give some options */
+    /* Initialize curses and set some options */
     initscr();
     noecho();
     curs_set(0);
     raw();
     getmaxyx(stdscr, current_y, current_x);
 
-    /* Check minimum resoultion requirements */
+    /* Check minimum resolution requirements */
     if(current_y < MAX_ROWS || current_x<MAX_COLS) {
         error("At least 24x80 pixels needed, resize your Terminal window!");
     }
@@ -256,7 +256,6 @@ int main(int argc, char *argv[])
 
             /* Draw the snake */
             for(m=0; m < tail_length; m++) {
-                /*              mvwaddch(play_area, snake[m].y, snake[m].x, ACS_CKBOARD); */
                 mvwprintw(play_area, snake[m].y, snake[m].x, "o");
             }
 
